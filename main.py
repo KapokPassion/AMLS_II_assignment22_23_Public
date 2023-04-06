@@ -13,7 +13,7 @@ if __name__ == '__main__':
 	cache_size=256
 	print('data prepare phase')
 	# phase: 'train' or 'valid'
-	# batch_size: depanding on your RAM size
+	# batch_size: depanding on your RAM size, should be a factor of your train/valid images number. For example, you got 800 train images, batch_size could be 100
 	save_h5(imgs_dir=r'./Datasets/DIV2K_train_HR', phase='train', scale=scale, patch_size=patch_size, stride=stride, batch_size=100, cache_size=cache_size)
 	print('data prepare phase done')
 	print('train phase')
